@@ -184,25 +184,11 @@ function actualizarImagenAhorcado(intentosRestantes) {
 }
 
 // Función para comprobar si se ha ganado el juego
-function comprobarGanar() {
-    if (palabraAdivinada === palabraElegida) {
-        Swal.fire({
-            title: '¡Ganaste!',
-            text: '¡Felicidades!',
-            icon: 'success',
-            confirmButtonText: 'Jugar de nuevo'
-        }).then(() => {
-            reiniciarJuego(); // Solo reiniciar juego si se ha ganado
-        });
+ alert("¡Ganaste!");
+        reiniciarJuego(); // Solo reiniciar juego si se ha ganado
     } else if (intentosRestantes === 0) {
-        Swal.fire({
-            title: '¡Perdiste!',
-            text: 'La palabra era: ' + palabraElegida,
-            icon: 'error',
-            confirmButtonText: 'Intentar de nuevo'
-        }).then(() => {
-            reiniciarJuego(); // Solo reiniciar juego si se ha perdido
-        });
+        alert("¡Perdiste! La palabra era: " + palabraElegida);
+        reiniciarJuego(); // Solo reiniciar juego si se ha perdido
     }
 }
 
